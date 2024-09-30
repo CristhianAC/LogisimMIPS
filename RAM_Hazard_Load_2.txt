@@ -1,0 +1,18 @@
+
+t0 = 0  
+t1 = 0
+t2 = 0
+t3 = 0
+
+ADDI $t0 $t0 0x0001
+ADDI $t1 $t1 0x0001
+ADD $t0 $t1 $t1
+ADD $t1 $t0 $t0
+SW $t1 0x0000 $t2
+LW $t3 0x0000 $t2
+ADD $t3 $t3 $t3
+
+t0 = 2
+t1 = 4
+t2 = 0
+t3 = 8
