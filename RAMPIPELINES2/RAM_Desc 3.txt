@@ -1,0 +1,22 @@
+
+t0 = 0  
+t1 = 0
+t2 = 0
+t3 = 0
+
+addi t0 t0 0x01 -> 21080001
+add t1 t0 t0 -> 01084820
+add t2 t0 t1  -> 01095020
+addi t3 t1 0x01 -> 212B0001
+sw t3 0x00($zero) -> AC0B0000
+add t2 t2 t2 -> 014A5020
+sw t3 0x00(t2) -> AD4B0000
+
+resultados
+t0 = 1
+t1 = 2
+t2 = 6
+t3 = 3
+M(0) = 3
+M(6) = 3
+
